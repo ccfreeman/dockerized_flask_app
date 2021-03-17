@@ -1,0 +1,21 @@
+services:
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    hostname: app
+    container_name: test_eggs
+    env_file:
+      - .env
+    ports:
+    - 8000:8000
+    - 5000:5000
+
+# services:
+#   pythonsamplevscodeflasktutorial:
+#     image: pythonsamplevscodeflasktutorial
+#     build:
+#       context: .
+#       dockerfile: ./Dockerfile
+#     ports:
+#       - 5050:5050
